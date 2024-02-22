@@ -1,34 +1,45 @@
 <x-app-layout>
 
-  <div class="card mt-2">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              Data Barang
+  <x-slot name="header">
+    <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+      {{ __(' Admin Dashboard') }}
+    </h2>
+  </x-slot>
+    <div class=" m-4  ">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
               
-              <a href="data_barang.php" class="btn btn-outline-primary btn-sm">Detail</a>
+              <div class="card-wrap">
+                <div class="card-header bg-danger">
+                  <h4 class="text-white">Produk</h4>
+                </div>
+                <div class="card-body">
+                  10
+                    <a href="/DataBarang" class="btn btn-success">Detail</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-       
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              Data Pengguna
-             
-              <a href="data_pengguna.php" class="btn btn-outline-primary btn-sm">Detail</a>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-wrap">
+                <div class="card-header bg-warning text-white">
+                  <h4> User</h4>
+                </div>
+                <div class="card-body">
+                  47
+                  <a href="/Pengguna" class="btn btn-success ">Detail</a>
+                </div>
+              </div>
             </div>
-          </div>
+          </div>                  
         </div>
-      </div>
+        <div class="card mt-2">
+            <div class="card-body text-center">
+                <p>Selamat datang dihalaman admin, silahkan anda bisa mengakses beberapa fitur</p>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="card mt-2">
-    <div class="card-body">
-      <p>Selamat datang dihalaman administrator, silahkan anda bisa mengakses beberapa fitur</p>
-    </div>
-  </div>
- 
+
 </x-app-layout>

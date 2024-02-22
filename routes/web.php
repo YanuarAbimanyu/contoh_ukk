@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DataBarangController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\DataBarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,17 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');    
 
-    Route::get('/DataBarang',[DataBarangController::class,'index']);
+    // Data Barang
+    Route::get('/DataBarang',[DataBarangController::class,'index'])-> name('DataBarang');
     Route::get('/DataBarang/create',[DataBarangController::class,'create']);
     Route::post('/DataBarang/store',[DataBarangController::class,'store']);
     Route::get('/DataBarang/{id}/edit',[DataBarangController::class,'edit']);
     Route::put('/DataBarang/{id}',[DataBarangController::class,'update']);
     Route::delete('/DataBarang/{id}',[DataBarangController::class,'delete']);
+
+    // Pengguna
+    Route::get('/Pengguna',[PenggunaController::class,'index'])-> name('Pengguna');
+    Route::post('/Pengguna/store',[PenggunaController::class,'store']);
 
 
 
